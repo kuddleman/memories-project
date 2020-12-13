@@ -20,7 +20,9 @@ app.use(cors())
 connectDB()
 const PORT = process.env.Port || 3000
 
-app.listen(PORT, () => console.log(`Server is RUNNING and started on port ${3000}`))
+app.listen(PORT, () => console.log(`Server is RUNNING and started on port ${PORT}`))
+
+
 
 // const CONNECTION_URL = 'mongodb+srv://javascriptmastery:@Airwestf27@sandbox.kumrl.mongodb.net/Sandbox?retryWrites=true&w=majority'
 // const PORT = process.env.PORT || 5000;
