@@ -9,15 +9,15 @@ import postRoutes from './routes/posts.js'
 
 const app = express()
 
-// Middleware
-app.use('/posts', postRoutes)
+
 
 // Set up bodyParser to be able to send requests.
 app.use(bodyParser.json({limit: '30mb', extended: true}))
 app.use(bodyParser.urlencoded({limit: '30mb', extended: true}))
 app.use(cors())
 
-
+// Middleware
+app.use('/posts', postRoutes)
 
 connectDB()
 const PORT = process.env.Port || 3000
